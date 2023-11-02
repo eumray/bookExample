@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>와이낫링크</title>
+    <style>
+        .on_off_bt {
+            position: relative;
+            margin-top: 11px;
+            display: inline-block;
+        }
+        .on_off_bt .check_toggle {
+            display: none;
+        }
+        .on_off_bt .toggle_bt {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            box-shadow: inset 0 0 0 1px #d5d5d5;
+            text-indent: -5000px;
+            height: 20px;
+            width: 37px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .on_off_bt .toggle_bt:after, .on_off_bt .toggle_bt:before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 20px;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            transition: .25s ease-in-out;
+        }
+        .on_off_bt .toggle_bt:after {
+            width: 20px;
+            background: #fff;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.2);
+        }
+        .on_off_bt .check_toggle:checked+.toggle_bt:before {
+            width: 37px;
+            background: #2f2f96;
+        }
+        .on_off_bt .check_toggle:checked+.toggle_bt:after {
+            left: 17px;
+            box-shadow: inset 0 0 0 1px #2f2f96, 0 2px 4px rgba(0,0,0,.2);
+        }
+    </style>
+</head>
+<body>
+<span class="on_off_bt">
+    <label>
+        <input type="checkbox" class="check_toggle" name="companySecret">
+        <span class="toggle_bt"></span>
+    </label>
+</span>
+
+</body>
+</html>
